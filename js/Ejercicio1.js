@@ -14,5 +14,5 @@ document.write(`<p>Color: ${auto.color}</p>`)
 document.write(`<p>Marca: ${auto.marca}</p>`)
 document.write(`<p>Modelo: ${auto.modelo}</p>`)
 auto.encenderMotor();
-document.write('<br>')
+document.write('<br>');
 auto.apagarMotor();
