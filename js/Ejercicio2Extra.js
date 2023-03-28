@@ -4,7 +4,7 @@ let persona = {
     apellido: 'Rueda Leal',
     edad: '29',
     estudiante: true,
-    hobbies: [],
+    hobbies: ['fútbol<br>','jugar con mi hijo<br>', 'programar<br>'],
 
     presentarPersona: ()=> {
         document.write(`Nombre: ${persona.nombre}<br>`)
@@ -13,17 +13,33 @@ let persona = {
         document.write(`Es estudiante: ${persona.estudiante}<br>`)
         document.write(`Sus hobbies son: ${persona.hobbies}<br>`)
     },
-    agregarHobbie: ()=> {
-        const nuevoHobbie = prompt("Ingrese un nuevo elemento para el arreglo:");
-        persona.hobbies.push(nuevoHobbie);
-
-    },
-    borrarHobbie: ()=> {
-        
-    },
-    buscarHobbie: ()=> {
-        
-    },
-}
-persona.presentarPersona();
-
+    agregarHobbie: (nuevoHobbie)=> {
+            this.hobbies.push(nuevoHobbie);
+            document.write(`${this.nuevoHobbie} ha sido agregado a mis hobbies.<br>`);
+          },
+    
+    borrarHobbie: (hobbie)=> {
+        const i = this.hobbies.indexOf(hobbie)
+        if (i> -1) {
+            this.hobbies.splice(i,1);
+            document.write(`${hobbie} se eliminó de la lista <br>`)
+        }
+        },
+    buscarHobbie: (hobbie) => {
+        const i = this.hobbies.indexOf(hobbie);
+        if (i > -1) {
+          document.write(`Sí está en la lista ${hobbie}. <br>`);
+        } else {
+          document.write(`No está en la lista ${hobbie}. <br>`);
+        }
+      },
+    }
+    persona.presentarPersona();
+    // Mostrar hobbies por pantalla
+  document.write('Mis hobbies son: <br>');
+  persona.hobbies.forEach(hobbie => document.write(hobbie));
+  persona.agregarHobbie('Salir a pasear<br>','descansar<br>','Salir con amigos <br>');
+  document.write(`Se agregó ${persona.hobbies.nuevoHobbie} como hobbie <br>`);
+  persona.buscarHobbie('viajar');  
+  persona.borrarHobbie(persona.hobbies[0]);  
+  document.write(persona.hobbies);  
