@@ -2,30 +2,32 @@
 let persona = {
     nombre: 'Federico Javier',
     apellido: 'Rueda Leal',
-    edad: '29',
+    edad: '29 años',
     estudiante: true,
-    hobbies: ['fútbol<br>','jugar con mi hijo<br>', 'programar<br>'],
+    hobbies: ["fútbol <br>",
+    "jugar con mi hijo<br>",
+"programar<br>"],
 
     presentarPersona: ()=> {
         document.write(`Nombre: ${persona.nombre}<br>`)
         document.write(`Apellido: ${persona.apellido}<br>`)
         document.write(`Edad: ${persona.edad}<br>`)
         document.write(`Es estudiante: ${persona.estudiante}<br>`)
-        document.write(`Sus hobbies son: ${persona.hobbies}<br>`)
-    },
-    agregarHobbie: (nuevoHobbie)=> {
+        document.write('<h4>Sus hobbies son:</h4>')
+        persona.hobbies.map(hobbie => document.write(`<li>${hobbie}</li>`));
+      },
+    agregarHobbie: function (nuevoHobbie) {
             this.hobbies.push(nuevoHobbie);
-            document.write(`${this.nuevoHobbie} ha sido agregado a mis hobbies.<br>`);
           },
     
-    borrarHobbie: (hobbie)=> {
+    borrarHobbie: function(hobbie) {
         const i = this.hobbies.indexOf(hobbie)
         if (i> -1) {
             this.hobbies.splice(i,1);
             document.write(`${hobbie} se eliminó de la lista <br>`)
         }
         },
-    buscarHobbie: (hobbie) => {
+    buscarHobbie: function (hobbie) {
         const i = this.hobbies.indexOf(hobbie);
         if (i > -1) {
           document.write(`Sí está en la lista ${hobbie}. <br>`);
@@ -34,12 +36,13 @@ let persona = {
         }
       },
     }
-    persona.presentarPersona();
-    // Mostrar hobbies por pantalla
-  document.write('Mis hobbies son: <br>');
-  persona.hobbies.forEach(hobbie => document.write(hobbie));
-  persona.agregarHobbie('Salir a pasear<br>','descansar<br>','Salir con amigos <br>');
-  document.write(`Se agregó ${persona.hobbies.nuevoHobbie} como hobbie <br>`);
-  persona.buscarHobbie('viajar');  
-  persona.borrarHobbie(persona.hobbies[0]);  
-  document.write(persona.hobbies);  
+  persona.presentarPersona();
+  persona.agregarHobbie('Jugar Basquet<br>');
+  persona.agregarHobbie('Natación<br>');
+  persona.agregarHobbie('Ir al cine<br>');
+  document.write('<br>')
+  persona.buscarHobbie('viajar<br>');
+  document.write('<br>')  
+  persona.borrarHobbie(persona.hobbies[0]);
+  document.write('<br>')
+  persona.presentarPersona();
