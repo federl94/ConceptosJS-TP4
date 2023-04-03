@@ -15,6 +15,7 @@ agendaLlena(): indica si la agenda está llena.
 huecosLibres(): indica cuántos contactos más podemos ingresar.
 
 Crea un menú con opciones que serán seleccionadas por el usuario usando un prompt, las salidas de las operaciones seleccionadas por el usuario se pueden mostrar en pantalla y  por consola.*/
+//EJERCICIO EXTRAIDO DEL PERFIL DE GITHUB DE GuillermoA231 (Guillermo Andrada)
 let inputConsola = -1;
 let mensajeIntroduccion = `TRABAJO PRACTICO NUMERO 7 - AGENDA
 0 - SALIR DE LA CONSOLA
