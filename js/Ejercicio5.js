@@ -15,52 +15,52 @@ class Persona {
         this.altura = altura
         this.anioNac = anioNac
     }
-    get nombre (){
+    getnombre (){
         return this.nombre
     }
-    get edad(){
+    getedad(){
         return this.edad
     }
-    get dni (){
+    getdni (){
         return this.dni
     }
-    get sexo (){
+    getsexo (){
         return this.sexo
     }
-    get peso (){
+    getpeso (){
         return this.peso
     }
-    get altura (){
+    getaltura (){
         return this.altura
     }
-    get anioNac(){
+    getanioNac(){
         return this.anioNac
     }
-    set nombre(nuevoNombre){
+    setnombre(nuevoNombre){
         if(nuevoNombre.lenght >=50){
             return this.nombre = nuevoNombre;
         }       
     }
-    set edad(nuevaEdad){
+    setedad(nuevaEdad){
         if (nuevaEdad > 0 && nuevaEdad < 130) {
         return this.edad = nuevaEdad;
         }
     }
-    set dni(nuevoDni){
+    setdni(nuevoDni){
         return this.dni = nuevoDni;
     }
-    set sexo(nuevoSexo){
+    setsexo(nuevoSexo){
         if (nuevoSexo == `Hombre` || nuevoSexo == `Mujer` || nuevoSexo == `No definido`){
             return this.sexo = nuevoSexo;
         }
     }
-    set peso (nuevoPeso){
+    setpeso (nuevoPeso){
         return this.peso = nuevoPeso;
     }
-    set altura(nuevaAltura){
+    setaltura(nuevaAltura){
         return this.altura = nuevaAltura;
     }
-    set anioNac(nuevoAnioNac){
+    setanioNac(nuevoAnioNac){
         if (nuevoAnioNac>=1930 && nuevoAnioNac<=2023){
             return this.anioNac = nuevoAnioNac;
         }
