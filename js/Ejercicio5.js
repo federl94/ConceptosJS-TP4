@@ -95,10 +95,10 @@ class Persona {
         return dni;
     }
     mostrarDatos(){
-        document.write(`Nombre: ${this.nombre}<br>Edad: ${this.edad}<br>DNI: ${this.dni}<br>Sexo: ${this.sexo}<br>Peso: ${this.peso}<br>Altura: ${this.altura}<br>Año de Nacimiento: ${this.anioNac}<br>`)
+        document.write(`<br>Nombre: ${this.nombre}<br>Edad: ${this.edad}<br>DNI: ${this.dni}<br>Sexo: ${this.sexo}<br>Peso: ${this.peso}<br>Altura: ${this.altura}<br>Año de Nacimiento: ${this.anioNac}<br>`)
     }
     }
-    const federico = new Persona ("Federico", 29, "Hombre", 88, 170,1994,34513548);
+    const federico = new Persona ("Federico", 29, 34513548, "Hombre", 80,1.70,1994);
+    federico.mostrarDatos();
     federico.esMayorDeEdad();
     federico.mostrarGeneracion();
-    federico.mostrarDatos();
